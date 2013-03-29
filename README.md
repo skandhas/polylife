@@ -24,3 +24,9 @@ $ git submodule init
 $ git submodule update
 ```
 3) Then, open __xcode/Polylife.xcodeproj__ and build it.
+
+### Windows
+
+1) Install GLFW and glm same as OSX.
+
+2) Then, open __msvc/Polylife.vcxproj__ and build it.
