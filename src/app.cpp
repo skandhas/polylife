@@ -83,12 +83,15 @@
     glfwEnable(GLFW_STICKY_KEYS);
     
     glBindFragDataLocation.preload();
+	glDeleteVertexArrays.preload();
+    
+#ifdef _WIN32
     glDeleteBuffers.preload();
     glDeleteProgram.preload();
 	glDeleteFramebuffers.preload();
     glDeleteRenderbuffers.preload();
 	glDeleteShader.preload();
-	glDeleteVertexArrays.preload();
+#endif
     
     this->SetupOpenGL();
     this->MainLoop();

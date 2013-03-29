@@ -31,11 +31,21 @@ glGenVertexArrays("glGenVertexArrays");
 GLExtensionFunc<void, GLuint>
 glBindVertexArray("glBindVertexArray");
     
-GLExtensionFunc<void, GLuint, GLsizei, const GLchar **, const GLint *>
-glShaderSource("glShaderSource");
-    
 GLExtensionFunc<void, GLuint, GLuint, const char *>
 glBindFragDataLocation("glBindFragDataLocation");
+
+GLExtensionFunc<void, GLsizei, const GLuint *>
+glDeleteVertexArrays("glDeleteVertexArrays");
+
+GLExtensionFunc<void, GLuint, GLuint, GLuint>
+glUniformBlockBinding("glUniformBlockBinding");
+
+GLExtensionFunc<GLuint, GLuint, const GLchar *>
+glGetUniformBlockIndex("glGetUniformBlockIndex");
+
+#ifdef _WIN32
+GLExtensionFunc<void, GLuint, GLsizei, const GLchar **, const GLint *>
+glShaderSource("glShaderSource");
     
 GLExtensionFunc<void, GLsizei, GLuint *>
 glGenBuffers("glGenBuffers");
@@ -90,10 +100,7 @@ glBindFramebuffer("glBindFramebuffer");
     
 GLExtensionFunc<void, GLsizei, GLuint *>
 glGenFramebuffers("glGenFramebuffers");
-    
-GLExtensionFunc<void, GLsizei, const GLuint *>
-glDeleteVertexArrays("glDeleteVertexArrays");
-    
+
 GLExtensionFunc<void, GLenum, GLenum, GLenum, GLuint, GLint>
 glFramebufferTexture2D("glFramebufferTexture2D");
 
@@ -150,15 +157,11 @@ glUniform3f("glUniform3f");
 
 GLExtensionFunc<void, GLint, GLfloat, GLfloat, GLfloat, GLfloat>
 glUniform4f("glUniform4f");
-    
+
 GLExtensionFunc<void, GLenum>
 glActiveTexture("glActiveTexture");
-    
-GLExtensionFunc<void, GLuint, GLuint, GLuint>
-glUniformBlockBinding("glUniformBlockBinding");
-
-GLExtensionFunc<GLuint, GLuint, const GLchar *>
-glGetUniformBlockIndex("glGetUniformBlockIndex");
 
 GLExtensionFunc<void, GLint, GLsizei, GLboolean, GLfloat *>
 glUniformMatrix4fv("glUniformMatrix4fv");
+
+#endif

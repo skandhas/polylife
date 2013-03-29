@@ -50,11 +50,11 @@
 		E4C00D781702C2DD000D9B84 /* gl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gl.cpp; path = ../src/gl.cpp; sourceTree = SOURCE_ROOT; };
 		E4C00D791702C2DD000D9B84 /* gl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gl.h; path = ../src/gl.h; sourceTree = SOURCE_ROOT; };
 		E4C00D7B1702C3D1000D9B84 /* extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = extension.h; path = ../src/extension.h; sourceTree = SOURCE_ROOT; };
-		E4C00D7D17030D4D000D9B84 /* model.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = model.frag; path = ../src/model.frag; sourceTree = SOURCE_ROOT; };
-		E4C00D7E17030D4D000D9B84 /* model.vert */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = model.vert; path = ../src/model.vert; sourceTree = SOURCE_ROOT; };
-		E4C00D8317053A46000D9B84 /* draw_buffer.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = draw_buffer.frag; path = ../src/draw_buffer.frag; sourceTree = SOURCE_ROOT; };
-		E4C00D8417053A46000D9B84 /* draw_buffer.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = draw_buffer.vert; path = ../src/draw_buffer.vert; sourceTree = SOURCE_ROOT; };
-		E4C00D89170564DB000D9B84 /* model.stl */ = {isa = PBXFileReference; lastKnownFileType = text; name = model.stl; path = ../model.stl; sourceTree = SOURCE_ROOT; };
+		E4C00D7D17030D4D000D9B84 /* model.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = model.frag; path = ../Resources/model.frag; sourceTree = SOURCE_ROOT; };
+		E4C00D7E17030D4D000D9B84 /* model.vert */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = model.vert; path = ../Resources/model.vert; sourceTree = SOURCE_ROOT; };
+		E4C00D8317053A46000D9B84 /* draw_buffer.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = draw_buffer.frag; path = ../Resources/draw_buffer.frag; sourceTree = SOURCE_ROOT; };
+		E4C00D8417053A46000D9B84 /* draw_buffer.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = draw_buffer.vert; path = ../Resources/draw_buffer.vert; sourceTree = SOURCE_ROOT; };
+		E4C00D89170564DB000D9B84 /* model.stl */ = {isa = PBXFileReference; lastKnownFileType = text; name = model.stl; path = ../Resources/model.stl; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

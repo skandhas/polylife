@@ -76,11 +76,21 @@ glGenVertexArrays;
 extern GLExtensionFunc<void, GLuint>
 glBindVertexArray;
     
-extern GLExtensionFunc<void, GLuint, GLsizei, const GLchar **, const GLint *>
-glShaderSource;
-    
 extern GLExtensionFunc<void, GLuint, GLuint, const char *>
 glBindFragDataLocation;
+
+extern GLExtensionFunc<void, GLuint, GLuint, GLuint>
+glUniformBlockBinding;
+
+extern GLExtensionFunc<GLuint, GLuint, const GLchar *>
+glGetUniformBlockIndex;
+
+extern GLExtensionFunc<void, GLsizei, const GLuint *>
+glDeleteVertexArrays;
+
+#ifdef _WIN32
+extern GLExtensionFunc<void, GLuint, GLsizei, const GLchar **, const GLint *>
+glShaderSource;
     
 extern GLExtensionFunc<void, GLsizei, GLuint *>
 glGenBuffers;
@@ -135,9 +145,6 @@ glBindFramebuffer;
     
 extern GLExtensionFunc<void, GLsizei, GLuint *>
 glGenFramebuffers;
-    
-extern GLExtensionFunc<void, GLsizei, const GLuint *>
-glDeleteVertexArrays;
     
 extern GLExtensionFunc<void, GLenum, GLenum, GLenum, GLuint, GLint>
 glFramebufferTexture2D;
@@ -195,15 +202,11 @@ glUniform3f;
 
 extern GLExtensionFunc<void, GLint, GLfloat, GLfloat, GLfloat, GLfloat>
 glUniform4f;
-    
-extern GLExtensionFunc<void, GLenum>
-glActiveTexture;
-    
-extern GLExtensionFunc<void, GLuint, GLuint, GLuint>
-glUniformBlockBinding;
-    
-extern GLExtensionFunc<GLuint, GLuint, const GLchar *>
-glGetUniformBlockIndex;
 
 extern GLExtensionFunc<void, GLint, GLsizei, GLboolean, GLfloat *>
 glUniformMatrix4fv;
+
+extern GLExtensionFunc<void, GLenum>
+glActiveTexture;
+
+#endif
