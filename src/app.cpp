@@ -33,7 +33,9 @@
 
 /* public */ App::App()
 {
-    
+    this->config.screen_width_ = Consts::DEFAULT_SCREEN_WIDTH;
+    this->config.screen_height_ = Consts::DEFAULT_SCREEN_HEIGHT;
+    this->config.window_mode_ = true;
 }
 
 
@@ -64,15 +66,15 @@
     
     glfwOpenWindowHint(GLFW_WINDOW_NO_RESIZE, GL_TRUE);
     
-    if(!glfwOpenWindow(Consts::SCREEN_WIDTH,
-                       Consts::SCREEN_HEIGHT,
+    if(!glfwOpenWindow(config.screen_width_,
+                       config.screen_height_,
                        Consts::RED_BITS,
                        Consts::GREEN_BITS,
                        Consts::BLUE_BITS,
                        Consts::ALPHA_BITS,
                        Consts::DEPTH_BITS,
                        Consts::STENCIL_BITS,
-                       GLFW_WINDOW
+                       config.window_mode_ ? GLFW_WINDOW : GLFW_FULLSCREEN
                        ))
     {
         return EXIT_FAILURE;
@@ -102,7 +104,26 @@
 }
 
 
-/* public */ void App::SetupOpenGL()
+/* public */ void App::LoadConfigure(const std::string& path)
+{
+    using namespace boost::property_tree;
+    
+    ptree pt;
+    
+    try {
+        json_parser::read_json(path, pt);
+    } catch (const std::exception e) {
+        std::cout << e.what() << std::endl;
+        std::cout << "Cannot load JSON configure; Use default." << std::endl;
+    }
+    
+    this->config.screen_width_ = pt.get<int>("screen.width", Consts::DEFAULT_SCREEN_WIDTH);
+    this->config.screen_height_ = pt.get<int>("screen.height", Consts::DEFAULT_SCREEN_HEIGHT);
+    this->config.window_mode_ = pt.get<bool>("window_mode", true);
+}
+
+
+/* private */ void App::SetupOpenGL()
 {
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     
@@ -115,11 +136,14 @@
 }
 
 
-/* public */ void App::MainLoop()
+/* private */ void App::MainLoop()
 {
     Model model(App::executable_path() + "../Resources/model.stl");
     Controller controller(model.connecting_face_buffer());
-    Renderer renderer(model.vertex_array(), controller.texture_buffer());
+    Renderer renderer(model.vertex_array(),
+                      controller.texture_buffer(),
+                      this->config.screen_width_,
+                      this->config.screen_height_);
     
     while (glfwGetWindowParam(GLFW_OPENED))
     {

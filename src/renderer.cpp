@@ -28,8 +28,12 @@
 #include "consts.h"
 
 /* public */ Renderer::Renderer(const VertexArrayBuffer& vertex_array,
-                                const TextureBuffer& texture_buffer) :
+                                const TextureBuffer& texture_buffer,
+                                int screen_width,
+                                int screen_height) :
 
+screen_width_(screen_width),
+screen_height_(screen_height),
 vertex_array_(vertex_array)
 
 {
@@ -73,14 +77,14 @@ vertex_array_(vertex_array)
     
     glGenRenderbuffers(1, &this->render_buffer_handle_);
     glBindRenderbuffer(GL_RENDERBUFFER, this->render_buffer_handle_);
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, Consts::SCREEN_WIDTH, Consts::SCREEN_HEIGHT);
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT, this->screen_width_, this->screen_height_);
     glBindRenderbuffer(GL_RENDERBUFFER, 0);
     
     glGenTextures(1, &this->frame_buffer_texture_handle_);
     glBindTexture(GL_TEXTURE_2D, this->frame_buffer_texture_handle_);
     
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB,
-                 Consts::SCREEN_WIDTH, Consts::SCREEN_HEIGHT,
+                 this->screen_width_, this->screen_height_,
                  0, GL_RGB, GL_UNSIGNED_BYTE, nullptr);
     
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
@@ -139,8 +143,8 @@ vertex_array_(vertex_array)
     location = glGetUniformLocation(this->draw_buffer_shader_program_handle_, "screen");
     glUseProgram(this->draw_buffer_shader_program_handle_);
     glUniform2f(location,
-                static_cast<GLfloat>(Consts::SCREEN_WIDTH),
-                static_cast<GLfloat>(Consts::SCREEN_HEIGHT));
+                static_cast<GLfloat>(this->screen_width_),
+                static_cast<GLfloat>(this->screen_height_));
 }
 
 
@@ -185,7 +189,7 @@ vertex_array_(vertex_array)
                           glm::vec3(1.0f, 0.0f, 1.0f),
                           glm::vec3(0.1f, 0, 0),
                           glm::vec3(0, 1, 0));
-    float aspect_ratio = 1.0 * Consts::SCREEN_WIDTH / Consts::SCREEN_HEIGHT;
+    float aspect_ratio = 1.0 * this->screen_width_ / this->screen_height_;
     
     pMatrix = glm::perspective(60.0f, aspect_ratio, 0.05f, 10.0f);
     

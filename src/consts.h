@@ -29,8 +29,8 @@ namespace Consts {
     
     const char APP_TITLE[]  = "Polylife";
     
-    const int SCREEN_WIDTH  = 1200;
-    const int SCREEN_HEIGHT = 800;
+    const int DEFAULT_SCREEN_WIDTH  = 1200;
+    const int DEFAULT_SCREEN_HEIGHT = 800;
 
     const int RED_BITS      = 8;
     const int GREEN_BITS    = 8;

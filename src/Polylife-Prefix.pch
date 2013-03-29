@@ -38,3 +38,6 @@
 #include "../glm/glm/glm.hpp"
 #include "../glm/glm/gtc/matrix_transform.hpp"
 #include "../glm/glm/gtc/noise.hpp"
+
+#include "../boost/property_tree/ptree.hpp"
+#include "../boost/property_tree/json_parser.hpp"

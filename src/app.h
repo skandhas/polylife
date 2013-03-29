@@ -33,6 +33,7 @@ public:
     App();
     ~App();
     int Run();
+    void LoadConfigure(const std::string& path);
     
     static void set_executable_path(const std::string& path);
     static const std::string& executable_path();
@@ -40,6 +41,12 @@ public:
 private:
     void SetupOpenGL();
     void MainLoop();
+    
+    struct {
+        int screen_width_;
+        int screen_height_;
+        bool window_mode_;
+    } config;
     
 private:
     // noncopyable

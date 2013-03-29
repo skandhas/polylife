@@ -31,7 +31,9 @@
 class Renderer {
 public:
     Renderer(const VertexArrayBuffer& vertex_array,
-             const TextureBuffer& texture_buffer);
+             const TextureBuffer& texture_buffer,
+             int screen_width,
+             int screen_height);
     
     ~Renderer();
     
@@ -60,6 +62,9 @@ private:
     
 private:
     VertexArrayBuffer vertex_array_;
+    
+    int screen_width_;
+    int screen_height_;
     
     GLuint vertex_array_handle_;
     GLuint vertex_buffer_handle_;

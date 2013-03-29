@@ -22,6 +22,7 @@
 		E4C00D8717053A6A000D9B84 /* draw_buffer.frag in Resources */ = {isa = PBXBuildFile; fileRef = E4C00D8317053A46000D9B84 /* draw_buffer.frag */; };
 		E4C00D8817053A6A000D9B84 /* draw_buffer.vert in Resources */ = {isa = PBXBuildFile; fileRef = E4C00D8417053A46000D9B84 /* draw_buffer.vert */; };
 		E4C00D8A170564F0000D9B84 /* model.stl in Resources */ = {isa = PBXBuildFile; fileRef = E4C00D89170564DB000D9B84 /* model.stl */; };
+		E4F42C1C170646FF00B43D8E /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = E4F42C1B170646FF00B43D8E /* config.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		E4C00D8317053A46000D9B84 /* draw_buffer.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = draw_buffer.frag; path = ../Resources/draw_buffer.frag; sourceTree = SOURCE_ROOT; };
 		E4C00D8417053A46000D9B84 /* draw_buffer.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = draw_buffer.vert; path = ../Resources/draw_buffer.vert; sourceTree = SOURCE_ROOT; };
 		E4C00D89170564DB000D9B84 /* model.stl */ = {isa = PBXFileReference; lastKnownFileType = text; name = model.stl; path = ../Resources/model.stl; sourceTree = SOURCE_ROOT; };
+		E4F42C1B170646FF00B43D8E /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = ../Resources/config.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		E4B00A5E170050D400FE2B12 /* Polylife */ = {
 			isa = PBXGroup;
 			children = (
+				E4F42C1B170646FF00B43D8E /* config.json */,
 				E4C00D89170564DB000D9B84 /* model.stl */,
 				E4C00D7C17030D3E000D9B84 /* shader */,
 				E4B00A7F17005D8000FE2B12 /* model.cpp */,
@@ -212,6 +215,7 @@
 				E4C00D8117030D9D000D9B84 /* model.frag in Resources */,
 				E4C00D8217030D9D000D9B84 /* model.vert in Resources */,
 				E4228FFC170583F4009E4405 /* icon.icns in Resources */,
+				E4F42C1C170646FF00B43D8E /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

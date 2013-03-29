@@ -42,5 +42,6 @@ int MAIN
 #ifdef __APPLE__
     app.set_executable_path(argv[0]);
 #endif
+    app.LoadConfigure(App::executable_path() + "../Resources/config.json");
     return app.Run();
 }
