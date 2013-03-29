@@ -39,6 +39,8 @@
 int MAIN
 {
     App app;
+#ifdef __APPLE__
     app.set_executable_path(argv[0]);
+#endif
     return app.Run();
 }

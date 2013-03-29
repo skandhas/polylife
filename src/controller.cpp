@@ -26,6 +26,8 @@
 #include "controller.h"
 #include "consts.h"
 
+void Sleep(unsigned int dwMilliseconds);
+
 namespace {
 size_t pow2(size_t in)
 {
@@ -43,7 +45,7 @@ thread_running_(false),
 mutex_(glfwCreateMutex())
 
 {
-    size_t texture_size = pow2(sqrt(connecting_face_buffer.size()));
+    size_t texture_size = pow2(sqrt(static_cast<double>(connecting_face_buffer.size())));
     this->texture_buffer_a_.resize(texture_size * texture_size);
     
     for (size_t i = 0; i < texture_size * texture_size; i++)
@@ -129,7 +131,8 @@ mutex_(glfwCreateMutex())
             std::swap(self->next_texture_buffer_, self->current_texture_buffer_);
         }
         
-        usleep(Consts::THREAD_SLEEP_USEC);
+		glfwSleep(Consts::THREAD_SLEEP_USEC / 1000000.0f);
+		
     }
 }
 

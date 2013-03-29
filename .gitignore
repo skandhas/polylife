@@ -11,3 +11,5 @@
 *.lai
 *.la
 *.a
+/msvc/Release/*.obj
+/msvc/Release/*.tlog

@@ -177,12 +177,12 @@
         FaceIndexSet connecting_face_set_p1 = vertex_to_face_map.at(it->connect_p1);
         FaceIndexSet connecting_face_set_p2 = vertex_to_face_map.at(it->connect_p2);
         
-        for (size_t face_index : connecting_face_set_p1)
+		for (auto face_it = connecting_face_set_p1.begin(); face_it != connecting_face_set_p1.end(); ++face_it)
         {
-            if (face_index != index &&
-                connecting_face_set_p2.find(face_index) != connecting_face_set_p2.end())
+            if (*face_it != index &&
+                connecting_face_set_p2.find(*face_it) != connecting_face_set_p2.end())
             {
-                connecting_face_set.insert(face_index);
+                connecting_face_set.insert(*face_it);
             }
         }
         

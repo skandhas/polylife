@@ -23,18 +23,4 @@
  
  */
 
-#ifdef __APPLE__
-#include <unistd.h>
-#endif
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <unordered_map>
-#include <unordered_set>
-#include <algorithm>
-
-#include "../glm/glm/glm.hpp"
-#include "../glm/glm/gtc/matrix_transform.hpp"
-#include "../glm/glm/gtc/noise.hpp"
+#include "Polylife-Prefix.pch"

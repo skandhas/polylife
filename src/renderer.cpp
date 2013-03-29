@@ -120,7 +120,7 @@ vertex_array_(vertex_array)
     glGenTextures(1, &state_texture_handle_);
     glBindTexture(GL_TEXTURE_2D, state_texture_handle_);
     
-    this->state_texture_size_ = sqrt(texture_buffer.size());
+    this->state_texture_size_ = sqrt(static_cast<double>(texture_buffer.size()));
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RED,
                  this->state_texture_size_, this->state_texture_size_,
                  0, GL_RED, GL_UNSIGNED_BYTE, texture_buffer.data());
