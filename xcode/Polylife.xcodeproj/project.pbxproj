@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4B00A59170050D400FE2B12 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B00A58170050D400FE2B12 /* Cocoa.framework */; };
+		E4B00A65170050D400FE2B12 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B00A64170050D400FE2B12 /* main.cpp */; };
+		E4B00A77170056BE00FE2B12 /* app.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B00A75170056BE00FE2B12 /* app.cpp */; };
+		E4B00A7A17005A4C00FE2B12 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B00A7917005A4C00FE2B12 /* IOKit.framework */; };
+		E4B00A7E17005A6500FE2B12 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B00A7D17005A6500FE2B12 /* OpenGL.framework */; };
+		E4B00A8117005D8000FE2B12 /* model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B00A7F17005D8000FE2B12 /* model.cpp */; };
+		E4C00D731702944A000D9B84 /* renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4C00D711702944A000D9B84 /* renderer.cpp */; };
+		E4C00D761702B84D000D9B84 /* controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4C00D741702B84D000D9B84 /* controller.cpp */; };
+		E4C00D7A1702C2DD000D9B84 /* gl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4C00D781702C2DD000D9B84 /* gl.cpp */; };
+		E4C00D8117030D9D000D9B84 /* model.frag in Resources */ = {isa = PBXBuildFile; fileRef = E4C00D7D17030D4D000D9B84 /* model.frag */; };
+		E4C00D8217030D9D000D9B84 /* model.vert in Resources */ = {isa = PBXBuildFile; fileRef = E4C00D7E17030D4D000D9B84 /* model.vert */; };
+		E4C00D8717053A6A000D9B84 /* draw_buffer.frag in Resources */ = {isa = PBXBuildFile; fileRef = E4C00D8317053A46000D9B84 /* draw_buffer.frag */; };
+		E4C00D8817053A6A000D9B84 /* draw_buffer.vert in Resources */ = {isa = PBXBuildFile; fileRef = E4C00D8417053A46000D9B84 /* draw_buffer.vert */; };
+		E4C00D8A170564F0000D9B84 /* model.stl in Resources */ = {isa = PBXBuildFile; fileRef = E4C00D89170564DB000D9B84 /* model.stl */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E4B00A55170050D400FE2B12 /* Polylife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polylife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B00A58170050D400FE2B12 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E4B00A5B170050D400FE2B12 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E4B00A5C170050D400FE2B12 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E4B00A5D170050D400FE2B12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E4B00A60170050D400FE2B12 /* Polylife-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Polylife-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E4B00A64170050D400FE2B12 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B00A66170050D400FE2B12 /* Polylife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Polylife-Prefix.pch"; path = "../src/Polylife-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		E4B00A75170056BE00FE2B12 /* app.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = app.cpp; path = ../src/app.cpp; sourceTree = SOURCE_ROOT; };
+		E4B00A76170056BE00FE2B12 /* app.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = app.h; path = ../src/app.h; sourceTree = SOURCE_ROOT; };
+		E4B00A781700579E00FE2B12 /* consts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = consts.h; path = ../src/consts.h; sourceTree = SOURCE_ROOT; };
+		E4B00A7917005A4C00FE2B12 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		E4B00A7B17005A5C00FE2B12 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		E4B00A7D17005A6500FE2B12 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		E4B00A7F17005D8000FE2B12 /* model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = model.cpp; path = ../src/model.cpp; sourceTree = SOURCE_ROOT; };
+		E4B00A8017005D8000FE2B12 /* model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = model.h; path = ../src/model.h; sourceTree = SOURCE_ROOT; };
+		E4C00D711702944A000D9B84 /* renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = renderer.cpp; path = ../src/renderer.cpp; sourceTree = SOURCE_ROOT; };
+		E4C00D721702944A000D9B84 /* renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = renderer.h; path = ../src/renderer.h; sourceTree = SOURCE_ROOT; };
+		E4C00D741702B84D000D9B84 /* controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = controller.cpp; path = ../src/controller.cpp; sourceTree = SOURCE_ROOT; };
+		E4C00D751702B84D000D9B84 /* controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = controller.h; path = ../src/controller.h; sourceTree = SOURCE_ROOT; };
+		E4C00D771702C061000D9B84 /* type.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = type.h; path = ../src/type.h; sourceTree = SOURCE_ROOT; };
+		E4C00D781702C2DD000D9B84 /* gl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gl.cpp; path = ../src/gl.cpp; sourceTree = SOURCE_ROOT; };
+		E4C00D791702C2DD000D9B84 /* gl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gl.h; path = ../src/gl.h; sourceTree = SOURCE_ROOT; };
+		E4C00D7B1702C3D1000D9B84 /* extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = extension.h; path = ../src/extension.h; sourceTree = SOURCE_ROOT; };
+		E4C00D7D17030D4D000D9B84 /* model.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = model.frag; path = ../src/model.frag; sourceTree = SOURCE_ROOT; };
+		E4C00D7E17030D4D000D9B84 /* model.vert */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = model.vert; path = ../src/model.vert; sourceTree = SOURCE_ROOT; };
+		E4C00D8317053A46000D9B84 /* draw_buffer.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = draw_buffer.frag; path = ../src/draw_buffer.frag; sourceTree = SOURCE_ROOT; };
+		E4C00D8417053A46000D9B84 /* draw_buffer.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = draw_buffer.vert; path = ../src/draw_buffer.vert; sourceTree = SOURCE_ROOT; };
+		E4C00D89170564DB000D9B84 /* model.stl */ = {isa = PBXFileReference; lastKnownFileType = text; name = model.stl; path = ../model.stl; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B00A52170050D400FE2B12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B00A7E17005A6500FE2B12 /* OpenGL.framework in Frameworks */,
+				E4B00A7A17005A4C00FE2B12 /* IOKit.framework in Frameworks */,
+				E4B00A59170050D400FE2B12 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4B00A4C170050D300FE2B12 = {
+			isa = PBXGroup;
+			children = (
+				E4B00A7D17005A6500FE2B12 /* OpenGL.framework */,
+				E4B00A7B17005A5C00FE2B12 /* GLKit.framework */,
+				E4B00A7917005A4C00FE2B12 /* IOKit.framework */,
+				E4B00A5E170050D400FE2B12 /* Polylife */,
+				E4B00A57170050D400FE2B12 /* Frameworks */,
+				E4B00A56170050D400FE2B12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B00A56170050D400FE2B12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4B00A55170050D400FE2B12 /* Polylife.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4B00A57170050D400FE2B12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4B00A58170050D400FE2B12 /* Cocoa.framework */,
+				E4B00A5A170050D400FE2B12 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4B00A5A170050D400FE2B12 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4B00A5B170050D400FE2B12 /* AppKit.framework */,
+				E4B00A5C170050D400FE2B12 /* CoreData.framework */,
+				E4B00A5D170050D400FE2B12 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E4B00A5E170050D400FE2B12 /* Polylife */ = {
+			isa = PBXGroup;
+			children = (
+				E4C00D89170564DB000D9B84 /* model.stl */,
+				E4C00D7C17030D3E000D9B84 /* shader */,
+				E4B00A7F17005D8000FE2B12 /* model.cpp */,
+				E4B00A8017005D8000FE2B12 /* model.h */,
+				E4B00A781700579E00FE2B12 /* consts.h */,
+				E4B00A75170056BE00FE2B12 /* app.cpp */,
+				E4B00A76170056BE00FE2B12 /* app.h */,
+				E4C00D781702C2DD000D9B84 /* gl.cpp */,
+				E4C00D791702C2DD000D9B84 /* gl.h */,
+				E4C00D7B1702C3D1000D9B84 /* extension.h */,
+				E4C00D711702944A000D9B84 /* renderer.cpp */,
+				E4C00D721702944A000D9B84 /* renderer.h */,
+				E4C00D741702B84D000D9B84 /* controller.cpp */,
+				E4C00D751702B84D000D9B84 /* controller.h */,
+				E4C00D771702C061000D9B84 /* type.h */,
+				E4B00A64170050D400FE2B12 /* main.cpp */,
+				E4B00A66170050D400FE2B12 /* Polylife-Prefix.pch */,
+				E4B00A5F170050D400FE2B12 /* Supporting Files */,
+			);
+			path = Polylife;
+			sourceTree = "<group>";
+		};
+		E4B00A5F170050D400FE2B12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4B00A60170050D400FE2B12 /* Polylife-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4C00D7C17030D3E000D9B84 /* shader */ = {
+			isa = PBXGroup;
+			children = (
+				E4C00D8317053A46000D9B84 /* draw_buffer.frag */,
+				E4C00D8417053A46000D9B84 /* draw_buffer.vert */,
+				E4C00D7D17030D4D000D9B84 /* model.frag */,
+				E4C00D7E17030D4D000D9B84 /* model.vert */,
+			);
+			name = shader;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B00A54170050D400FE2B12 /* Polylife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B00A72170050D500FE2B12 /* Build configuration list for PBXNativeTarget "Polylife" */;
+			buildPhases = (
+				E4B00A51170050D400FE2B12 /* Sources */,
+				E4B00A52170050D400FE2B12 /* Frameworks */,
+				E4B00A53170050D400FE2B12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Polylife;
+			productName = Polylife;
+			productReference = E4B00A55170050D400FE2B12 /* Polylife.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B00A4D170050D400FE2B12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = h2so5;
+			};
+			buildConfigurationList = E4B00A50170050D400FE2B12 /* Build configuration list for PBXProject "Polylife" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E4B00A4C170050D300FE2B12;
+			productRefGroup = E4B00A56170050D400FE2B12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4B00A54170050D400FE2B12 /* Polylife */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4B00A53170050D400FE2B12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C00D8A170564F0000D9B84 /* model.stl in Resources */,
+				E4C00D8717053A6A000D9B84 /* draw_buffer.frag in Resources */,
+				E4C00D8817053A6A000D9B84 /* draw_buffer.vert in Resources */,
+				E4C00D8117030D9D000D9B84 /* model.frag in Resources */,
+				E4C00D8217030D9D000D9B84 /* model.vert in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B00A51170050D400FE2B12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B00A65170050D400FE2B12 /* main.cpp in Sources */,
+				E4B00A77170056BE00FE2B12 /* app.cpp in Sources */,
+				E4B00A8117005D8000FE2B12 /* model.cpp in Sources */,
+				E4C00D731702944A000D9B84 /* renderer.cpp in Sources */,
+				E4C00D761702B84D000D9B84 /* controller.cpp in Sources */,
+				E4C00D7A1702C2DD000D9B84 /* gl.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E4B00A70170050D500FE2B12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4B00A71170050D500FE2B12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E4B00A73170050D500FE2B12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "../src/Polylife-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				INFOPLIST_FILE = "Polylife-Info.plist";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lglfw";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4B00A74170050D500FE2B12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "../src/Polylife-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				INFOPLIST_FILE = "Polylife-Info.plist";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "-lglfw";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B00A50170050D400FE2B12 /* Build configuration list for PBXProject "Polylife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B00A70170050D500FE2B12 /* Debug */,
+				E4B00A71170050D500FE2B12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B00A72170050D500FE2B12 /* Build configuration list for PBXNativeTarget "Polylife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B00A73170050D500FE2B12 /* Debug */,
+				E4B00A74170050D500FE2B12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B00A4D170050D400FE2B12 /* Project object */;
+}
