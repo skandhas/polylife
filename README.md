@@ -11,7 +11,7 @@ Conway's Game of Life on STL models
 
 ### OSX 10.7 or later
 
-1) Install [GLFW](http://www.glfw.org/). Add the library/header path as necessary.
+1) Install [GLFW](http://www.glfw.org/) and [boost](http://www.boost.org/). Add the library/header path as necessary.
 
 2) Checkout Polylife and [glm](http://glm.g-truc.net/) as submodule.
 
@@ -27,6 +27,6 @@ $ git submodule update
 
 ### Windows
 
-1) Install GLFW and glm same as OSX.
+1) Install GLFW, boost and glm same as OSX.
 
 2) Then, open __msvc/Polylife.vcxproj__ and build it.
