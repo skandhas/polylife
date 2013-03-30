@@ -26,6 +26,7 @@
 #include "controller.h"
 #include "consts.h"
 
+#undef min
 void Sleep(unsigned int dwMilliseconds);
 
 namespace {
@@ -38,11 +39,13 @@ size_t pow2(size_t in)
 } // anonymous namespace
 
     
-/* public */ Controller::Controller(const ConnectingFaceSetBuffer& connecting_face_buffer) :
+/* public */ Controller::Controller(const ConnectingFaceSetBuffer& connecting_face_buffer, int reset_generation) :
 
 connecting_face_buffer_(connecting_face_buffer),
 thread_running_(false),
-mutex_(glfwCreateMutex())
+mutex_(glfwCreateMutex()),
+reset_generation_(reset_generation),
+generation_count_(0)
 
 {
     size_t texture_size = pow2(sqrt(static_cast<double>(connecting_face_buffer.size())));
@@ -94,6 +97,20 @@ mutex_(glfwCreateMutex())
 }
 
 
+/* private */ void Controller::Reset()
+{
+	size_t texture_size = sqrt(static_cast<double>(this->texture_buffer_a_.size()));
+
+	for (size_t i = 0; i < texture_size * texture_size; i++)
+    {
+        float rand_value = glm::simplex(glm::vec2(i % texture_size / 16.f, i / texture_size / 16.f));
+        this->texture_buffer_a_[i] = (rand_value > 0.5) ? 1 : 0;
+    }
+    
+    this->texture_buffer_b_ = this->texture_buffer_a_;
+}
+
+
 /* static private */ void GLFWCALL Controller::CalcThread(void *void_self)
 {
     Controller* self = reinterpret_cast<Controller*>(void_self);
@@ -126,6 +143,14 @@ mutex_(glfwCreateMutex())
             }
         }
         
+		self->generation_count_++;
+
+		if (self->reset_generation_ > 0 && self->generation_count_ % self->reset_generation_ == 0)
+		{
+            MutexScope mutex_scope(self->mutex_);
+			self->Reset();
+		}
+		else
         {
             MutexScope mutex_scope(self->mutex_);
             std::swap(self->next_texture_buffer_, self->current_texture_buffer_);

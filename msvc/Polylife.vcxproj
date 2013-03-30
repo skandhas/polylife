@@ -39,12 +39,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\glfw-2.7.7\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Program Files\boost\boost_1_51;C:\glfw-2.7.7\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\glfw-2.7.7\support\msvc100\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\glfw-2.7.7\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Program Files\boost\boost_1_51;C:\glfw-2.7.7\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\glfw-2.7.7\support\msvc100\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -71,6 +71,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>Polylife-Prefix.pch</PrecompiledHeaderFile>
       <ForcedIncludeFiles>Polylife-Prefix.pch</ForcedIncludeFiles>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

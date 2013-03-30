@@ -36,6 +36,7 @@
     this->config.screen_width_ = Consts::DEFAULT_SCREEN_WIDTH;
     this->config.screen_height_ = Consts::DEFAULT_SCREEN_HEIGHT;
     this->config.window_mode_ = true;
+	this->config.reset_generation_ = 1200;
 }
 
 
@@ -120,6 +121,7 @@
     this->config.screen_width_ = pt.get<int>("screen.width", Consts::DEFAULT_SCREEN_WIDTH);
     this->config.screen_height_ = pt.get<int>("screen.height", Consts::DEFAULT_SCREEN_HEIGHT);
     this->config.window_mode_ = pt.get<bool>("window_mode", true);
+	this->config.reset_generation_ = pt.get<int>("reset_generation", 1200);
 }
 
 
@@ -139,7 +141,7 @@
 /* private */ void App::MainLoop()
 {
     Model model(App::executable_path() + "../Resources/model.stl");
-    Controller controller(model.connecting_face_buffer());
+    Controller controller(model.connecting_face_buffer(), this->config.reset_generation_);
     Renderer renderer(model.vertex_array(),
                       controller.texture_buffer(),
                       this->config.screen_width_,

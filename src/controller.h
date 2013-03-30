@@ -33,7 +33,7 @@ public:
     typedef std::vector<std::unordered_set<size_t>> ConnectingFaceSetBuffer;
     
 public:
-    Controller(const ConnectingFaceSetBuffer& connecting_face_buffer);
+    Controller(const ConnectingFaceSetBuffer& connecting_face_buffer, int reset_generation);
     ~Controller();
     
     /* Thread-safe */ const TextureBuffer& texture_buffer() const;
@@ -41,7 +41,8 @@ public:
 private:
     /* Thread-safe */ bool thread_running() const;
     /* Thread-safe */ void set_thread_running(bool thread_running);
-    
+
+	void Reset();
     static void GLFWCALL CalcThread(void *void_self);
     
 private:
@@ -61,6 +62,9 @@ private:
     
     GLFWthread thread_;
     GLFWmutex mutex_;
+
+	int reset_generation_;
+	int generation_count_;
     
 private:
     class MutexScope {

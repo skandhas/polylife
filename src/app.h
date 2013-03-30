@@ -46,6 +46,7 @@ private:
         int screen_width_;
         int screen_height_;
         bool window_mode_;
+		int reset_generation_;
     } config;
     
 private:
