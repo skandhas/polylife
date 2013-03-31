@@ -182,7 +182,7 @@ vertex_array_(vertex_array)
     
     glm::mat4 mMatrix, vMatrix, pMatrix, mvpMatrix;
     
-    mMatrix = glm::scale(glm::mat4(1.0f), glm::vec3(4.0f));
+    mMatrix = glm::scale(glm::mat4(1.0f), glm::vec3(2.8f));
     mMatrix = glm::rotate(mMatrix, angle, glm::vec3(0.0f, 1.0f, 1.0f));
     
     vMatrix = glm::lookAt(

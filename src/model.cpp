@@ -69,6 +69,10 @@
     Vec3Buffer vertex_buffer;
     Vec3Buffer normal_buffer;
     
+    glm::vec3 max_vect;
+    glm::vec3 min_vect;
+    glm::vec3 center_vect;
+    
     std::string line;
     while (std::getline(*ifs, line))
     {
@@ -77,13 +81,33 @@
         if (sscanf(line.c_str(), "%*[ ]vertex %f %f %f", &vect.x, &vect.y, &vect.z) == 3)
         {
             vertex_buffer.push_back(vect);
-            unique_vertex_set_ref.insert(vect);
+            
+            max_vect.x = std::max(max_vect.x, vect.x);
+            max_vect.y = std::max(max_vect.y, vect.y);
+            max_vect.z = std::max(max_vect.z, vect.z);
+            
+            min_vect.x = std::min(min_vect.x, vect.x);
+            min_vect.y = std::min(min_vect.y, vect.y);
+            min_vect.z = std::min(min_vect.z, vect.z);
+            
+            center_vect += vect;
         }
         else if (sscanf(line.c_str(), "%*[ ]facet normal %f %f %f", &vect.x, &vect.y, &vect.z) == 3)
         {
             normal_buffer.push_back(vect);
         }
     }
+    
+    center_vect /= vertex_buffer.size();
+    float model_size = glm::length(max_vect - min_vect);
+    
+    for (auto it = vertex_buffer.begin(); it != vertex_buffer.end(); ++it)
+    {
+        *it -= center_vect;
+        *it /= model_size;
+    }
+    
+    unique_vertex_set_ref.insert(vertex_buffer.begin(), vertex_buffer.end());
     
     assert(vertex_buffer.size() % 3 == 0);
     assert(normal_buffer.size() * 3 == vertex_buffer.size());
